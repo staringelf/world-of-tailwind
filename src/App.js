@@ -10,8 +10,14 @@ const App = () => {
   const theme = useState("darkblue");
 
   return (
-    <div>
-      <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={theme}>
+      <div 
+        className="p-0 m-0"
+        style={{
+               background: 
+                "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)"
+           }}
+      >
         <Router>
           <header>
             <Link to="/">
@@ -27,8 +33,8 @@ const App = () => {
             </Route>
           </Switch>
         </Router>
-      </ThemeContext.Provider>
-    </div>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
